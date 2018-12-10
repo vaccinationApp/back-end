@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -23,5 +25,8 @@ urlpatterns = [
     path('farmer/', include('farmer.urls')),
     path('employee/', include('employee.urls')),
     path('livestock/', include('livestock.urls')),
-    path('vaccination/', include('vaccination.urls'))
+    path('vaccination/', include('vaccination.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/token/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view()),
 ]

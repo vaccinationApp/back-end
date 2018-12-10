@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
 class FarmerView(viewsets.ModelViewSet):
