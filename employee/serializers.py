@@ -11,7 +11,7 @@ class EmployeeTypeSerializer(serializers.HyperlinkedModelSerializer):
         model = EmployeeType
         fields = ('id','name')
 
-class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
+class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employee
         fields = ('id','employeeskey','name','employeetype','department','phone')
