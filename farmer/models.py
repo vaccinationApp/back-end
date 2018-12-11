@@ -68,7 +68,7 @@ class Farmer(models.Model):
     phone = models.CharField(max_length=20,verbose_name = 'Номер телефона')
     email = models.EmailField(max_length=40,verbose_name = 'почта')
     address = models.CharField(max_length=50,verbose_name = 'Адрес')
-    coordinate = models.CharField(max_length=1000,verbose_name = 'Координаты',help_text="Координаты дома(можно посмотреть в google map)")
+    coordinate = models.CharField(null=True,max_length=1000,verbose_name = 'Координаты',help_text="Координаты дома(можно посмотреть в google map)")
     village = models.ForeignKey(Village,on_delete=models.CASCADE, verbose_name = 'Поселок')
 
     def __str__(self):

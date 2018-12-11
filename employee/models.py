@@ -17,7 +17,7 @@ class EmployeeType(models.Model):
 class Department(models.Model):
     name = models.CharField(max_length=100,verbose_name = 'Название Отдела')
     address = models.CharField(max_length=100,verbose_name ='Адрес')
-    coordinate = models.CharField(max_length=1000,verbose_name = 'Координаты' , help_text="Координаты отдела(можно найти через google maps) Выглядит так 43.202556, 76.632247")
+    coordinate = models.CharField(null=True,max_length=1000,verbose_name = 'Координаты' , help_text="Координаты отдела(можно найти через google maps) Выглядит так 43.202556, 76.632247")
     region = models.ForeignKey('farmer.Region',on_delete=models.CASCADE,verbose_name = "Регион")
 
 
