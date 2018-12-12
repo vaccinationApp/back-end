@@ -41,7 +41,7 @@ class TypesofLiveStock(models.Model):
 
 
 class LiveStock(models.Model):
-    id = models.CharField(max_length=100,primary_key=True,verbose_name = 'Номер животного',help_text='8 цифр')
+    id = models.CharField(max_length=100,primary_key=True,verbose_name = 'Номер животного',help_text='KZB212345678')
     sex = models.ForeignKey(Sex,on_delete=models.CASCADE,verbose_name = 'Пол животного')
     age = models.IntegerField(verbose_name = 'Лет')
     typeoflivestock = models.ForeignKey(TypesofLiveStock, on_delete=models.CASCADE, verbose_name = 'Тип Животного')

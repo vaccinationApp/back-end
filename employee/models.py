@@ -30,7 +30,7 @@ class Department(models.Model):
 
 class Employee(models.Model):
     id = models.CharField(max_length=20,primary_key=True,verbose_name = "ИИН работника")
-    employeeskey = models.CharField(max_length=1000,verbose_name = 'Пароль')
+    employeeskey = models.IntegerField(max_length=1000,verbose_name = 'Пароль')
     name = models.CharField(max_length=100,verbose_name = "ФИО")
     employeetype = models.ForeignKey(EmployeeType,on_delete=models.CASCADE,verbose_name = "Специальность")
     department = models.ForeignKey(Department,on_delete=models.CASCADE,verbose_name = "Отдел")
