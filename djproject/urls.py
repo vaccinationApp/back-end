@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken import views
+from .views import login
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -26,5 +27,5 @@ urlpatterns = [
     path('livestock/', include('livestock.urls')),
     path('vaccination/', include('vaccination.urls')),
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
-
+    path('login',login),
 ]
