@@ -44,7 +44,7 @@ class Modeofapplication(models.Model):
 
 
 class Medicine(models.Model):
-    id = models.FloatField(primary_key=True,verbose_name='Номер вакцины')
+    id = models.CharField(max_length=100,primary_key=True,verbose_name='Номер вакцины')
     name = models.CharField(max_length=100,verbose_name = 'Вакцина',help_text="название лекарства(если есть одино лекарство,но объем(мл) разный,то нужно вводить каждый)")
     dose = models.IntegerField(verbose_name = 'Доза',help_text="количество доз на каждый флакон")
     disease = models.ManyToManyField(Disease,verbose_name = 'Болезнь',help_text="Название болезней,которые лечит это лекарство")
