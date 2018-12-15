@@ -64,7 +64,7 @@ class Vaccination(models.Model):
     employee = models.ForeignKey('employee.Employee', on_delete=models.CASCADE,verbose_name = 'Вакцинатор',help_text="Вакцинатор")
     livestock = models.ForeignKey('livestock.LiveStock', on_delete=models.CASCADE,verbose_name = 'Животное',help_text="Номер животного")
     medicine = models.ForeignKey(Medicine, on_delete=models.CASCADE,verbose_name = 'Вакцина',help_text="Лекарство")
-    bloodtest = models.ForeignKey(Bloodtest, on_delete=models.CASCADE,verbose_name = 'Тест крови',help_text="Тест крови")
+    bloodtest = models.ForeignKey(Bloodtest, on_delete=models.CASCADE,verbose_name = 'Тест крови',help_text="Тест крови",null=True,blank=True)
     date = models.DateField(verbose_name = 'Дата',help_text="Время, когда поставили вакцину")
 
     def __str__(self):
