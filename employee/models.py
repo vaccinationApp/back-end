@@ -34,7 +34,7 @@ class Employee(models.Model):
     name = models.CharField(max_length=100,verbose_name = "ФИО")
     employeetype = models.ForeignKey(EmployeeType,on_delete=models.CASCADE,verbose_name = "Специальность")
     department = models.ForeignKey(Department,on_delete=models.CASCADE,verbose_name = "Отдел")
-    ruraldistrict = models.ForeignKey('farmer.RuralDistrict', on_delete=models.CASCADE, verbose_name='Сельский округ',blank=True,null=True)
+    ruraldistrict = models.ForeignKey('farmer.RuralDistrict', on_delete=models.CASCADE, verbose_name='Сельский округ')
     phone = models.CharField(max_length=30,verbose_name='Номер телефона')
 
 
