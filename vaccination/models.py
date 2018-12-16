@@ -9,7 +9,7 @@ from django.db import models
 
 
 class Bloodtest(models.Model):
-    id = models.CharField(max_length=20,primary_key=True,verbose_name='Номер теста')
+    id = models.CharField(max_length=100,primary_key=True,verbose_name='Номер теста')
     status = models.BooleanField(verbose_name = 'Статус',help_text="Поставить галочку если тест прошел успешно")
     date = models.DateField(verbose_name = 'Дата',help_text="дата взятие крови")
 
