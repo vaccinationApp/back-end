@@ -29,15 +29,15 @@ class Suit(models.Model):
         verbose_name_plural = 'Масти'
 
 class TypesofLiveStock(models.Model):
-    name = models.CharField(max_length=100,verbose_name = 'Тип животного',help_text="тип скота(крупнорогатый,лошади,верблюды)")
+    name = models.CharField(max_length=100,verbose_name = 'Вид животного',help_text="вид скота(крупнорогатый,лошади,верблюды)")
     suit = models.ForeignKey(Suit,on_delete=models.CASCADE,verbose_name = 'Масть животного')
 
     def __str__(self):
         return self.name+"|"+str(self.suit)
 
     class Meta:
-        verbose_name = 'Тип животного'
-        verbose_name_plural = 'Типы животного'
+        verbose_name = 'Вид животного'
+        verbose_name_plural = 'Виды животных'
 
 
 class LiveStock(models.Model):
