@@ -8,6 +8,7 @@ router.register('Disease', views.DiseaseView)
 router.register('Vaccination', views.VaccinationView)
 router.register('BloodTest', views.BloodtestView)
 router.register('Modeofapplication', views.BloodtestView)
+router.register('TestMethod', views.TestMethodView)
 urlpatterns = [
     path('', include(router.urls))
 ]

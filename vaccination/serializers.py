@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Disease,Bloodtest,Medicine,Vaccination,Modeofapplication
+from .models import Disease,Bloodtest,Medicine,Vaccination,Modeofapplication,TestMethod
 
 
 class ModeofapplicationSerializer(serializers.ModelSerializer):
@@ -14,7 +14,13 @@ class DiseaseSerializer(serializers.ModelSerializer):
 class BloodtestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bloodtest
-        fields = ('id', 'status','date')
+        fields = ('id','livestock','employee','disease','testmethod','status','date')
+
+class TestMethodSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TestMethod
+        fields = ('id','name')
+
 
 class MedicineSerializer(serializers.ModelSerializer):
     class Meta:
