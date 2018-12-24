@@ -28,7 +28,7 @@ class Modeofapplication(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Ввод препара'
+        verbose_name = 'Ввод препарата'
         verbose_name_plural = 'Способы ввода препарата'
 
 

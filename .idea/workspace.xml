@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc1a5bf-82e6-4fe1-b309-208032e803c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/livestock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/livestock/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vaccination/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vaccination/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,37 +49,37 @@
           <entry key="Procfile" value="79" />
           <entry key="gitignore" value="38" />
           <entry key="menuurls" value="3" />
-          <entry key="py" value="7129" />
+          <entry key="py" value="7132" />
           <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="139" />
-          <entry key="Python" value="7132" />
+          <entry key="Python" value="7135" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/livestock/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="57">
               <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vaccination/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+            <state relative-caret-position="346">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1545656623864" expanded="true" signature="2741:2972" ph="..." />
+                <marker date="1545658714567" expanded="true" signature="2743:2974" ph="..." />
               </folding>
             </state>
           </provider>
@@ -227,8 +227,8 @@
         <option value="$PROJECT_DIR$/vaccination/urls.py" />
         <option value="$PROJECT_DIR$/vaccination/admin.py" />
         <option value="$PROJECT_DIR$/vaccination/serializers.py" />
-        <option value="$PROJECT_DIR$/vaccination/models.py" />
         <option value="$PROJECT_DIR$/livestock/models.py" />
+        <option value="$PROJECT_DIR$/vaccination/models.py" />
       </list>
     </option>
   </component>
@@ -260,7 +260,7 @@
             <path>
               <item name="djproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="djproject" type="462c0819:PsiDirectoryNode" />
-              <item name="livestock" type="462c0819:PsiDirectoryNode" />
+              <item name="vaccination" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -562,21 +562,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vaccination/models.py">
+    <entry file="file://$PROJECT_DIR$/livestock/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1545656623864" expanded="true" signature="2741:2972" ph="..." />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/livestock/models.py">
+    <entry file="file://$PROJECT_DIR$/vaccination/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+        <state relative-caret-position="346">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1545658714567" expanded="true" signature="2743:2974" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
