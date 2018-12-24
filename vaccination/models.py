@@ -78,7 +78,7 @@ class Bloodtest(models.Model):
     livestock = models.ForeignKey('livestock.LiveStock', on_delete=models.CASCADE, verbose_name='Животное',help_text="Номер животного")
     employee = models.ForeignKey('employee.Employee', on_delete=models.CASCADE,verbose_name = 'Вакцинатор')
     disease = models.ForeignKey(Disease,on_delete=models.CASCADE,verbose_name = 'Болезнь')
-    testmethod=models.ForeignKey(TestMethod,on_delete=models.CASCADE,verbose_name='Вид исследования',default='Бактериолагическое')
+    testmethod = models.ForeignKey(TestMethod,on_delete=models.CASCADE,verbose_name='Вид исследования')
     status = models.BooleanField(verbose_name = 'Статус',help_text="Положительный/Отрицательный")
     date = models.DateField(verbose_name = 'Дата')
 
@@ -87,5 +87,5 @@ class Bloodtest(models.Model):
 
 
     class Meta:
-        verbose_name = 'Диагно крови'
+        verbose_name = 'Тест крови'
         verbose_name_plural = 'Тесты крови'
