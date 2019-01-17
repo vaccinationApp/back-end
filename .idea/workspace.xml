@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc1a5bf-82e6-4fe1-b309-208032e803c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/vaccination/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vaccination/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="3bc1a5bf-82e6-4fe1-b309-208032e803c0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +12,7 @@
     <session id="-855849130">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="3" />
