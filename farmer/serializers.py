@@ -1,11 +1,19 @@
 from rest_framework import serializers
+
+from livestock.serializers import LiveStockSerializer
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 
 
 class FarmerSerializer(serializers.ModelSerializer):
+    livestocks = serializers.SerializerMethodField()
+
     class Meta:
         model = Farmer
-        fields = ('id', 'name', 'phone', 'email','address','coordinate','village')
+        fields = ('id', 'name', 'phone', 'email','address','coordinate','village', 'livestocks')
+
+    def get_livestocks(self, instance):
+        serializer = LiveStockSerializer(instance.livestocks.all(), many=True)
+        return serializer.data
 
 class VillageSerializer(serializers.ModelSerializer):
     class Meta:

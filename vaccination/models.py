@@ -55,7 +55,6 @@ class Vaccination(models.Model):
     livestock = models.ForeignKey('livestock.LiveStock', on_delete=models.CASCADE,verbose_name = 'Животное',help_text="Номер животного")
     medicine = models.ForeignKey(Medicine, on_delete=models.CASCADE,verbose_name = 'Вакцина',help_text="Лекарство")
     date = models.DateField(verbose_name = 'Дата',help_text="Время, когда поставили вакцину")
-
     def __str__(self):
         return str(self.id)
 

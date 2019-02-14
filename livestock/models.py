@@ -45,7 +45,7 @@ class LiveStock(models.Model):
     sex = models.ForeignKey(Sex,on_delete=models.CASCADE,verbose_name = 'Пол животного')
     age = models.IntegerField(verbose_name = 'Месяцы')
     typeoflivestock = models.ForeignKey(TypesofLiveStock, on_delete=models.CASCADE, verbose_name = 'Тип Животного')
-    farmer = models.ForeignKey('farmer.Farmer',on_delete=models.CASCADE,verbose_name = 'ИИН Владельца животного')
+    farmer = models.ForeignKey('farmer.Farmer',on_delete=models.CASCADE,verbose_name = 'ИИН Владельца животного',related_name='livestocks')
     placeofbirth = models.ForeignKey('farmer.Village',on_delete=models.CASCADE,verbose_name = 'Населенный пункт',help_text="Поселок,где родилось животное")
     def __str__(self):
         return self.id
