@@ -18,7 +18,7 @@ class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
    # search_fields = ('name', 'id')
-    filter_fields = ('name')
+
 
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()
