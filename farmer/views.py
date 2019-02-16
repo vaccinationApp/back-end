@@ -5,12 +5,20 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
+
 from rest_framework import viewsets, permissions
+from rest_framework import filters
+
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
+
+
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
+   # search_fields = ('name', 'id')
+    filter_fields = ('name')
 
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()

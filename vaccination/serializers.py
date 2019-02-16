@@ -29,5 +29,5 @@ class BloodtestSerializer(serializers.ModelSerializer):
 class VaccinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccination
-        fields = ('id','employee','livestock','medicine','bloodtest','date')
+        fields = ('id','employee','livestock','medicine','date')
 
