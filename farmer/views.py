@@ -18,8 +18,8 @@ from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, 
 
 
 class SaleItemFilter(django_filters.FilterSet):
-    start_date = filters.NumberFilter(field_name='livestocks__vaccination__date',lookup_expr=('gt'),)
-    end_date = filters.NumberFilter(field_name='livestocks__vaccination__date',lookup_expr=('lt'))
+    start_date = filters.DateFilter(field_name='livestocks__vaccination__date',lookup_expr=('gt'),)
+    end_date = filters.DateFilter(field_name='livestocks__vaccination__date',lookup_expr=('lt'))
     #date_range = DateRangeFilter(name='date')
     class Meta:
         model = Farmer
