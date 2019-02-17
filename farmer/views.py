@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import django_filters
 from django.shortcuts import render
 
 # Create your views here.
@@ -12,18 +13,25 @@ from rest_framework import filters
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from django_filters import rest_framework as filters
-
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
 
 
-
+class SaleItemFilter(django_filters.FilterSet):
+    start_date = filters.NumberFilter(field_name='livestocks__vaccination__date',lookup_expr=('gt'),)
+    end_date = filters.NumberFilter(field_name='livestocks__vaccination__date',lookup_expr=('lt'))
+    #date_range = DateRangeFilter(name='date')
+    class Meta:
+        model = Farmer
+        fields = ['name']
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
-    filter_backends = (filters.DjangoFilterBackend,)
+   # filter_backends = (filters.DjangoFilterBackend,)
     #search_fields = ('name', 'id')
-    filterset_fields = ('id','name','livestocks__vaccination__date')
+    #filterset_fields = ('id','name','livestocks__vaccination__date')
+    filter_class = SaleItemFilter
+
 
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()
