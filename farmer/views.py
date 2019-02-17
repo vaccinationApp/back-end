@@ -11,6 +11,7 @@ from rest_framework import viewsets, permissions, status
 from rest_framework import filters
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
+from django_filters import rest_framework as filters
 
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
@@ -20,8 +21,9 @@ from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, 
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
-    filter_backends = (filters.SearchFilter,)
-    search_fields = ('name', 'id')
+    filter_backends = (filters.DjangoFilterBackend,)
+    #search_fields = ('name', 'id')
+    filterset_fields = ('id','name','livestocks__vaccination__date')
 
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()
