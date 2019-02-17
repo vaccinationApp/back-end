@@ -76,9 +76,9 @@ class Bloodtest(models.Model):
     id = models.CharField(max_length=100,primary_key=True,verbose_name='Номер теста')
     livestock = models.ForeignKey('livestock.LiveStock', on_delete=models.CASCADE, verbose_name='Животное',help_text="Номер животного")
     employee = models.ForeignKey('employee.Employee', on_delete=models.CASCADE,verbose_name = 'Вакцинатор')
-    disease = models.ForeignKey(Disease,on_delete=models.CASCADE,verbose_name = 'Болезнь')
-    testmethod = models.ForeignKey(TestMethod,on_delete=models.CASCADE,verbose_name='Вид исследования')
-    status = models.BooleanField(verbose_name = 'Статус',help_text="Положительный/Отрицательный")
+    disease = models.ForeignKey(Disease,on_delete=models.CASCADE,verbose_name = 'Болезнь',null=True,blank=True,)
+    testmethod = models.ForeignKey(TestMethod,on_delete=models.CASCADE,verbose_name='Вид исследования',null=True,blank=True,)
+    status = models.BooleanField(verbose_name = 'Статус',help_text="Положительный/Отрицательный",null=True,blank=True,)
     date = models.DateField(verbose_name = 'Дата')
 
     def __str__(self):

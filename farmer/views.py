@@ -17,7 +17,8 @@ from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, 
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
-   # search_fields = ('name', 'id')
+    search_fields = ('name', 'id')
+    pagination_class = None
 
 
 class VillageView(viewsets.ModelViewSet):
