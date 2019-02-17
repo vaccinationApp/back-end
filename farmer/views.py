@@ -9,16 +9,22 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import viewsets, permissions
 from rest_framework import filters
+from rest_framework.pagination import PageNumberPagination
 
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
+
+class StandardResultsSetPagination(PageNumberPagination):
+    page_size = 100
+    page_size_query_param = 'page_size'
+    max_page_size = 10000
 
 
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
     search_fields = ('name', 'id')
-    pagination_class = None
+    pagination_class = StandardResultsSetPagination
 
 
 class VillageView(viewsets.ModelViewSet):
