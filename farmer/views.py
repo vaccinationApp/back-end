@@ -17,20 +17,20 @@ from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
 from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
 
 
-class SaleItemFilter(django_filters.FilterSet):
+class VacDateFilter(django_filters.FilterSet):
     start_date = filters.DateFilter(field_name='livestocks__vaccination__date',lookup_expr=('gt'),)
     end_date = filters.DateFilter(field_name='livestocks__vaccination__date',lookup_expr=('lt'))
     #date_range = DateRangeFilter(name='date')
     class Meta:
         model = Farmer
-        fields = ['name']
+        fields = ['name','id']
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
    # filter_backends = (filters.DjangoFilterBackend,)
     #search_fields = ('name', 'id')
     #filterset_fields = ('id','name','livestocks__vaccination__date')
-    filter_class = SaleItemFilter
+    filter_class = VacDateFilter
 
 
 class VillageView(viewsets.ModelViewSet):
