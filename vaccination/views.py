@@ -8,7 +8,7 @@ from django.shortcuts import render
 from django_filters import filters
 from rest_framework import viewsets
 from .models import Disease,Medicine,Bloodtest,Vaccination,Modeofapplication,TestMethod
-from .serializers import DiseaseSerializer,MedicineSerializer,VaccinationSerializer,BloodtestSerializer,ModeofapplicationSerializer,TestMethodSerializer#,TableVaccinationSerializer
+from .serializers import DiseaseSerializer,MedicineSerializer,VaccinationSerializer,BloodtestSerializer,ModeofapplicationSerializer,TestMethodSerializer,TableVaccinationSerializer
 class DiseaseView(viewsets.ModelViewSet):
     queryset = Disease.objects.all()
     serializer_class = DiseaseSerializer
@@ -38,9 +38,9 @@ class VaccinationView(viewsets.ModelViewSet):
     serializer_class = VaccinationSerializer
     filter_class = VacDateFilter
 
-#class TableVaccinationView(viewsets.ModelViewSet):
-    #queryset = Vaccination.objects.all()
-   # serializer_class = TableVaccinationSerializer
+class TableVaccinationView(viewsets.ModelViewSet):
+    queryset = Vaccination.objects.all()
+    serializer_class = TableVaccinationSerializer
 
 
 class ModeofapplicationView(viewsets.ModelViewSet):
