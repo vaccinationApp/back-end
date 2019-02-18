@@ -30,7 +30,7 @@ class TableVaccinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccination
         fields = ('id','employee','livestock','medicine','date')
-        depth = 3
+        depth = 2
 
 class VaccinationSerializer(serializers.ModelSerializer):
     class Meta:
