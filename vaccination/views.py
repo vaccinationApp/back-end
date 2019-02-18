@@ -31,7 +31,7 @@ class VacDateFilter(django_filters.FilterSet):
     #date_range = DateRangeFilter(name='date')
     class Meta:
         model = Vaccination
-        fields = ['employee','livestock__farmer__name','livestock']
+        fields = ['employee__name','livestock__farmer__name']
 
 class VaccinationView(viewsets.ModelViewSet):
     queryset = Vaccination.objects.all()
