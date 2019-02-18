@@ -36,12 +36,12 @@ class VacDateFilter(django_filters.FilterSet):
 class VaccinationView(viewsets.ModelViewSet):
     queryset = Vaccination.objects.all()
     serializer_class = VaccinationSerializer
-    filter_class = VacDateFilter
+
 
 class TableVaccinationView(viewsets.ModelViewSet):
     queryset = Vaccination.objects.all()
     serializer_class = TableVaccinationSerializer
-
+    filter_class = VacDateFilter
 
 class ModeofapplicationView(viewsets.ModelViewSet):
     queryset = Modeofapplication.objects.all()

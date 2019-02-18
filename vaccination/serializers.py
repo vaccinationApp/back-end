@@ -26,13 +26,13 @@ class BloodtestSerializer(serializers.ModelSerializer):
         model = Bloodtest
         fields = ('id','livestock','employee','disease','testmethod','status','date')
 
-class VaccinationSerializer(serializers.ModelSerializer):
+class TableVaccinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccination
         fields = ('id','employee','livestock','medicine','date')
         depth = 2
 
-class TableVaccinationSerializer(serializers.ModelSerializer):
+class VaccinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccination
         fields = ('id', 'employee', 'livestock', 'medicine', 'date')
