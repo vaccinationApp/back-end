@@ -9,7 +9,8 @@ router.register('Vaccination', views.VaccinationView)
 router.register('BloodTest', views.BloodtestView)
 router.register('Modeofapplication', views.BloodtestView)
 router.register('TestMethod', views.TestMethodView)
-router.register('TableVaccination',views.TableVaccinationView,basename='table')
+router.register('TableVaccination',views.TableVaccinationView,basename='tablevac')
+router.register('TableBloodTest',views.TableBloodtestView,basename='tableblood')
 urlpatterns = [
     path('', include(router.urls))
 ]

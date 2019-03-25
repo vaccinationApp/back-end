@@ -26,6 +26,12 @@ class BloodtestSerializer(serializers.ModelSerializer):
         model = Bloodtest
         fields = ('id','livestock','employee','disease','testmethod','status','date')
 
+class TableBloodtestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bloodtest
+        fields = ('id','livestock','employee','disease','testmethod','status','date')
+        depth = 3
+
 class TableVaccinationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccination

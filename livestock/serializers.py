@@ -11,7 +11,6 @@ class SuitSerializer(serializers.ModelSerializer):
 
 class LiveStockSerializer(serializers.ModelSerializer):
     vaccinations = serializers.SerializerMethodField()
-
     class Meta:
         model = LiveStock
         fields = ('id','sex','age','typeoflivestock','farmer','placeofbirth', 'vaccinations')
@@ -30,4 +29,5 @@ class SexSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sex
         fields = ('id','name')
+
 

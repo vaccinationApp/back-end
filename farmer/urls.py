@@ -10,6 +10,7 @@ router.register('Region', views.RegionView)
 router.register('Oblast', views.OblastView)
 router.register('Country', views.CountryView)
 router.register('Farmer', views.FarmerView)
+router.register('TableFarmer', views.TableFarmerView,basename='tablefarmer')
 urlpatterns = [
     path('', include(router.urls))
 ]

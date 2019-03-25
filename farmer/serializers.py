@@ -14,6 +14,12 @@ class FarmerSerializer(serializers.ModelSerializer):
     def get_livestocks(self, instance):
         serializer = LiveStockSerializer(instance.livestocks.all(), many=True)
         return serializer.data
+class TableFarmerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Farmer
+        fields = ('id', 'name', 'phone', 'email','address','coordinate','village', 'livestocks')
+        depth = 3
 
 class VillageSerializer(serializers.ModelSerializer):
     class Meta:

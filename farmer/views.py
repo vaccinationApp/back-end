@@ -14,7 +14,7 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from django_filters import rest_framework as filters
 from .models import Farmer,Village,Region,Oblast,Country,RuralDistrict
-from .serializers import FarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
+from .serializers import FarmerSerializer,TableFarmerSerializer, VillageSerializer, RegionSerializer, OblastSerializer, CountrySerializer, RuralDistrictSerializer
 
 
 class VacDateFilter(django_filters.FilterSet):
@@ -23,15 +23,19 @@ class VacDateFilter(django_filters.FilterSet):
     #date_range = DateRangeFilter(name='date')
     class Meta:
         model = Farmer
-        fields = ['name','id']
-class FarmerView(viewsets.ModelViewSet):
+        fields = ['id']
+
+class TableFarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
-    serializer_class = FarmerSerializer
+    serializer_class = TableFarmerSerializer
    # filter_backends = (filters.DjangoFilterBackend,)
     #search_fields = ('name', 'id')
     #filterset_fields = ('id','name','livestocks__vaccination__date')
     filter_class = VacDateFilter
 
+class FarmerView(viewsets.ModelViewSet):
+    queryset = Farmer.objects.all()
+    serializer_class = FarmerSerializer
 
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()
