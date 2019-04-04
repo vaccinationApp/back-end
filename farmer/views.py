@@ -28,15 +28,16 @@ class VacDateFilter(django_filters.FilterSet):
 class TableFarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = TableFarmerSerializer
-   # filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filters.DjangoFilterBackend,)
     #search_fields = ('name', 'id')
-    #filterset_fields = ('id','name','livestocks__vaccination__date')
-    filter_class = VacDateFilter
+    filterset_fields = ('id','name')
+    #filter_class = VacDateFilter
 
 class FarmerView(viewsets.ModelViewSet):
     queryset = Farmer.objects.all()
     serializer_class = FarmerSerializer
-
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_fields = ('id','name')
 class VillageView(viewsets.ModelViewSet):
     queryset = Village.objects.all()
     serializer_class = VillageSerializer
