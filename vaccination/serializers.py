@@ -30,7 +30,7 @@ class TableBloodtestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bloodtest
         fields = ('id','livestock','employee','disease','testmethod','status','date')
-        depth = 3
+        depth = 4
 
 class TableVaccinationSerializer(serializers.ModelSerializer):
     class Meta:
